@@ -17,15 +17,10 @@ public class NhanVienMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        NhanVien nv1 = new NhanVien("Nguyen Quang Trung",21,"Quy Nhon , Binh Dinh",7000000,99);
-      NhanVien nv2 = new NhanVien("Han Mac Tu",26,"Quy Nhon , Binh Dinh",14000000,201);
-      //
-      //in thong tin nv
-      System.out.println(nv1.getThongTin());
-      System.out.println(nv2.getThongTin()) ;
-      
-      
-    }
+       NhanVien nhanVien1 = new NhanVien("Lê Quang Hưởng", 21, "Ninh Hòa", 5000000, 300);
+        NhanVien nhanVien2 = new NhanVien("Nguyễn Anh Đức", 21, "Nha Trang", 3000000, 200);
+        System.out.println(nhanVien1.getThongTin()+"Tiền Thưởng:"+nhanVien1.tinhThuong());
+        System.out.println(nhanVien2.getThongTin()+"Tiền Thưởng:"+nhanVien2.tinhThuong()); 
     }
     
 }

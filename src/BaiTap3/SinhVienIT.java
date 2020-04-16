@@ -27,8 +27,5 @@ public class SinhVienIT extends SinhVienPoly{
     {
         return (2*this.diemJava+this.diemCss+this.diemHtml)/4;
     }
-
-    void xuat() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }

@@ -11,83 +11,74 @@ package BaiTap1;
  * @author lehuo
  */
 public class NhanVien {
-    private String ten;
-  private int tuoi;
-  private String diaChi;
-  private double tienLuong;
-  private int tongGioLam;
-  // Constructor không tham số.
-  public NhanVien() 
-    {
-    this.ten="";
-    this.tuoi= 0;
-    this.diaChi="";
-    this.tienLuong=0;
-    this.tongGioLam=0;
-    
+  private String Ten;
+    private int Tuoi;
+    private String Diachi;
+    private double Tienluong;
+    private int Tongsogiolam;
+    public String getThongTin() {
+        return "Tên:"+Ten+"\n"+"Tuổi:"+Tuoi+"\n"+"Địa chỉ:"+Diachi+
+                "\n"+"Tiền lương:"+Tienluong+"\n"+"Tổng số giờ làm:"+Tongsogiolam+"\n";
     }
-  public NhanVien(String ten,int tuoi,String diaChi,double tienLuong,int tongGioLam)
-  {
-       this.ten = ten;
-       this.tuoi = tuoi;
-       this.diaChi = diaChi;
-       this.tienLuong = tienLuong;
-       this.tongGioLam = tongGioLam;
-  }
+    public double tinhThuong() {
+        if(Tongsogiolam>=200) {
+            return Tienluong*0.2;
+        }
+        else if(Tongsogiolam<200 && Tongsogiolam>=100){
+            return Tienluong*0.1;
+        }
+        else if(Tongsogiolam<100) {
+            return 0;
+        }
+        return 0;
+    }
+    public NhanVien() {
+    }
+    public NhanVien(String Ten, int Tuoi, String Diachi, double Tienluong, int Tongsogiolam) {
+        this.Ten = Ten;
+        this.Tuoi = Tuoi;
+        this.Diachi = Diachi;
+        this.Tienluong = Tienluong;
+        this.Tongsogiolam = Tongsogiolam;
+    }
 
     public String getTen() {
-        return ten;
+        return Ten;
+    }
+
+    public void setTen(String Ten) {
+        this.Ten = Ten;
     }
 
     public int getTuoi() {
-        return tuoi;
+        return Tuoi;
     }
 
-    public String getDiaChi() {
-        return diaChi;
+    public void setTuoi(int Tuoi) {
+        this.Tuoi = Tuoi;
     }
 
-    public double getTienLuong() {
-        return tienLuong;
+    public String getDiachi() {
+        return Diachi;
     }
 
-    public int getTongGioLam() {
-        return tongGioLam;
+    public void setDiachi(String Diachi) {
+        this.Diachi = Diachi;
     }
 
-    public void setTen(String ten) {
-        this.ten = ten;
+    public double getTienluong() {
+        return Tienluong;
     }
 
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
+    public void setTienluong(double Tienluong) {
+        this.Tienluong = Tienluong;
     }
 
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
+    public int getTongsogiolam() {
+        return Tongsogiolam;
     }
 
-    public void setTienLuong(double tienLuong) {
-        this.tienLuong = tienLuong;
-    }
-
-    public void setTongGioLam(int tongGioLam) {
-        this.tongGioLam = tongGioLam;
-    }
-// lay thong tin nv
-    public  String getThongTin(){
-        return "ten:"+ this.ten + "\t tuoi:"+this.tuoi+"\t dia chi:"+this.diaChi
-       +"\t tien luong:"+this.tienLuong+"\t tong gio lam:"+this.tongGioLam
-                +"\t tien thuong:"+tinhThuong();
-    }
- //tinh luong nv
-    public double tinhThuong(){
-        if(this.tongGioLam>=200) return this.tienLuong*0.2;
-        if(this.tongGioLam>=100) return this.tienLuong*0.1;
-        return 0;
-    }
-
-    boolean getThongTin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setTongsogiolam(int Tongsogiolam) {
+        this.Tongsogiolam = Tongsogiolam;
     }
 }

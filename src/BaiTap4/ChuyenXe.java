@@ -10,24 +10,29 @@ package BaiTap4;
  *
  * @author lehuo
  */
-public abstract class ChuyenXe {
-   public String maSoChuyen;
-    public String hoTenTaiXe;
-    public String soXe;
-    public double doanhThu;
+public class ChuyenXe {
+   private String MaSoChuyen;
+    private String HoTenTX;
+    private String SoXe;
+    double DoanhThu;
+    public ChuyenXe(){
+    }
+    public ChuyenXe(String MaSoChuyen, String HoTenTX, String SoXe, double DoanhThu) {
+        this.MaSoChuyen = MaSoChuyen;
+        this.HoTenTX = HoTenTX;
+        this.SoXe = SoXe;
+        this.DoanhThu = DoanhThu;
+    }
 
     public double getDoanhThu() {
-        return doanhThu;
+        return DoanhThu;
     }
-    
-    public ChuyenXe(String maSoChuyen,String hoTenTaiXe,String soXe, double doanhThu)
-    {
-        this.maSoChuyen=maSoChuyen;
-        this.hoTenTaiXe=hoTenTaiXe;
-        this.soXe=soXe;
-        this.doanhThu=doanhThu;
-                
-               
+
+    public void setDoanhThu(double DoanhThu) {
+        this.DoanhThu = DoanhThu;
     }
-    public abstract void inThongTinChuyenXe(); 
+    public void xuat() {
+        System.out.println("Mã số chuyến:"+MaSoChuyen+"\n"+"Họ tên tài xế:"+HoTenTX
+                            +"\n"+"Số xe:"+SoXe+"\n"+"Doanh thu:"+DoanhThu);
+    }
 }

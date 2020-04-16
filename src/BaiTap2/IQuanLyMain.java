@@ -21,9 +21,9 @@ public class IQuanLyMain {
         // TODO code application logic here
          NhanVien nv0 = new NhanVien("Le Quang A",20,"Binh Dinh", 5000000, 140);
         NhanVien nv1 = new NhanVien("Le Quang B",20,"Quy Nhon", 9000000, 209);
-        NhanVien nv2 = new NhanVien("Le Quang C",20,"Binh Dinh", 4000000, 159);
+        NhanVien nv2 = new NhanVien("Le Quang C",20,"Khanh Hoa", 4000000, 159);
         NhanVien nv3 = new NhanVien("Le Quang D",20,"Quy Nhon", 7000000, 301);
-        NhanVien nv4 = new NhanVien("Le Quang E",20,"Binh Dinh", 3000000, 69);
+        NhanVien nv4 = new NhanVien("Le Quang E",20,"Phu Yen", 3000000, 69);
        QuanLyNhanVien qlnv = new QuanLyNhanVien();
      
        qlnv.them(nv0);

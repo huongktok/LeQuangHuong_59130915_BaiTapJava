@@ -17,8 +17,8 @@ public class SinhVienMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        SinhVienIT svIT = new SinhVienIT("Tran Van A","CNTT",9,9,9);
-        SinhVienBiz svBiz = new SinhVienBiz("Nguyen Van B","KD thuong mai",9,9.5);
+        SinhVienIT svIT = new SinhVienIT("Le Quang Huong","CNTT",9,9,10);
+        SinhVienBiz svBiz = new SinhVienBiz("Nguyen Quang H","KD thuong mai",9,10);
         svIT.xuat();
         svBiz.xuat();
     }

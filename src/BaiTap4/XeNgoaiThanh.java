@@ -11,22 +11,18 @@ package BaiTap4;
  * @author lehuo
  */
 public class XeNgoaiThanh extends ChuyenXe{
-    public String noiDen;
-    public int soNgayDi;
-    public XeNgoaiThanh(String maSoChuyen,String hoTenTaiXe,String soXe, double doanhThu,String noiDen,int soNgayDi)
-    {
-        super(maSoChuyen, hoTenTaiXe, soXe, doanhThu);
-        this.noiDen=noiDen;
-        this.soNgayDi=soNgayDi;
+    String NoiDen;
+    int SoNgayDiDuoc;
+    public XeNgoaiThanh(){
+    }
+    public XeNgoaiThanh(String NoiDen, int SoNgayDiDuoc, String MaSoChuyen, String HoTenTX, String SoXe, double DoanhThu) {
+        super(MaSoChuyen, HoTenTX, SoXe, DoanhThu);
+        this.NoiDen = NoiDen;
+        this.SoNgayDiDuoc = SoNgayDiDuoc;
     }
     @Override
-    public void inThongTinChuyenXe()
-    {
-     System.out.println("Ma So Chuyen: "+this.maSoChuyen+
-                        "\nHo Va Ten Tai Xe: "+this.hoTenTaiXe+
-                        "\nSo Xe: "+this.soXe+
-                        "\nNoi Den: "+this.noiDen+
-                        "\nSO Ngay Di: "+this.soNgayDi+
-                        "\nDoanh Thu: "+this.doanhThu);
-    }
+    public void xuat() {
+        super.xuat(); 
+        System.out.println("Nơi đến:"+NoiDen+"\n"+"Số ngày đi được:"+SoNgayDiDuoc+"\n");
+    }   
 }

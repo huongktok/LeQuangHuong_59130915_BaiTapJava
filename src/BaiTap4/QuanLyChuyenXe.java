@@ -6,50 +6,43 @@
 
 package BaiTap4;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author lehuo
  */
 public class QuanLyChuyenXe {
-    public    ArrayList<ChuyenXe> DSChuyenXe = new ArrayList<>();
-    
-    public void themChuyenXe(ChuyenXe cx)
-    {
-        DSChuyenXe.add(cx);
-    }
-    public void inDSChuyenXe()
-    {
-        for(int i=0;i<DSChuyenXe.size();i++)
-        {
-            DSChuyenXe.get(i).inThongTinChuyenXe();
-            System.out.println("\t \t -------\t \t");
-        }
-    }
-    public double tinhDoanhThuNoiThanh(){
-        double doanhThu = 0;
-        for(int i = 0; i <DSChuyenXe.size(); i++){
-            if(DSChuyenXe.get(i) instanceof XeNoiThanh)
-                doanhThu += DSChuyenXe.get(i).getDoanhThu();
-        }
-        return doanhThu;
+    List<ChuyenXe> dsChuyenXe = new ArrayList<>();
+    void themChuyenXe(ChuyenXe chuyenXe) {
+        
+        dsChuyenXe.add(chuyenXe);
     }
     
-    public double tinhDoanhThuNgoaiThanh(){
-        double doanhThu = 0;
-        for(int i = 0; i <DSChuyenXe.size(); i++){
-            if(DSChuyenXe.get(i) instanceof XeNgoaiThanh)
-                doanhThu += DSChuyenXe.get(i).getDoanhThu();
+    void xuatDS() {       
+        for(ChuyenXe chuyenXe: dsChuyenXe) {
+            chuyenXe.xuat();
         }
-        return doanhThu;
     }
     
-    public double tongDoanhThu(){
-        double doanhThu = 0;
-        for(int i = 0; i <DSChuyenXe.size(); i++){
-            doanhThu += DSChuyenXe.get(i).getDoanhThu();
+    double tinhDoanhThuNoiThanh() {
+        double tong = 0;
+        for(ChuyenXe chuyenXe: dsChuyenXe) {
+            if(chuyenXe instanceof XeNoiThanh) {
+                tong = tong + chuyenXe.getDoanhThu();
+            }
         }
-        return doanhThu;
+        return tong;
+    }
+    
+    double tinhDoanhThuNgoaiThanh() {
+        double tong = 0;
+        for(ChuyenXe chuyenXe: dsChuyenXe) {
+            if(chuyenXe instanceof XeNgoaiThanh) {
+                tong = tong + chuyenXe.getDoanhThu();
+            }
+        }
+        return tong;
     }
 }
